@@ -1,0 +1,123 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 90px;
+  }
+  body{
+    color: #de4848;
+    position: relative;
+    /* background-color: rgba(208, 255, 105, 0.209); */
+    background: url(Light-blue-wavy-abstract-background-vector-01.jpg) no-repeat;
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+
+  } 
+  .container{
+    display: flex;
+   gap: 70px;
+   position: absolute;
+   left: 359px;
+   top: 160px;
+   width: 850px;
+   height:400px ;
+   background: linear-gradient(to bottom, #0000cc 0%, #ccffff 100%);
+    border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .container-box{
+    margin-top: 100px;
+  }
+  .box-title{
+    font-size: 50px;
+  }
+  .colon{
+    position: absolute;
+    top: 169px;
+    left: 279px;
+  }
+  .colon1{
+    position: absolute;
+    top: 169px;
+    left: 530px;
+  }
+  .flip-card{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    border-radius: .1em;
+    /* border: 1px solid rgba(0, 0, 0, 0.233); */
+  }
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  height: .75em;
+  line-height: 1;
+  padding: .25em;
+  overflow: hidden;
+}
+.top,
+.flip-card .top-flip {
+  background-color: #f7f7f7;
+  border-top-right-radius: .1em;
+  border-top-left-radius: .1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.flip-card .top-flip {
+    position: absolute;
+    width: 100%;
+    animation: flip-top 250ms ease-in;
+    transform-origin: bottom;
+  }
+.bottom,
+.flip-card .bottom-flip {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: .1em;
+  border-bottom-left-radius: .1em;
+}
+@keyframes flip-top {
+    100% {
+      transform: rotateX(90deg);
+    }
+  }
+  
+  .flip-card .bottom-flip {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: flip-bottom 250ms ease-out 250ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+  }
+  
+  @keyframes flip-bottom {
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
+  
+  .container {
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+  }
+  
+  .container-segment {
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    align-items: center;
+  }
+  
+  .segment {
+    display: flex;
+    gap: .1em;
+  }
+  
+  .segment-title {
+    font-size: 1rem;
+  }
